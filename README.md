@@ -4,8 +4,12 @@ A brand new Slimefun addon adding the ability to dye your beloved backpacks!
 - Supports all 16 Minecraft default colors.
 - Extensive configuration options! Disable/Enable backpack coloring per level.
 
-## Download DyedBackpacks
-You can download DyedBackpacks right here: [Development Builds](https://thebusybiscuit.github.io/builds/TheBusyBiscuit/DyedBackpacks/master/)
+## Download
+For now no compiled builds for 1.21.X are available.
+You will have to compile them yourself against Slimefun builds from [SF-Lab](https://github.com/SlimeFun-Lab/Slimefun4).
+These builds are **NOT** compatible with Spigot!
+
+You can download old builds for versions **below** 1.21 right here: [Development Builds](https://thebusybiscuit.github.io/builds/TheBusyBiscuit/DyedBackpacks/master/)
 
 <p align="center">
   <a href="https://thebusybiscuit.github.io/builds/TheBusyBiscuit/DyedBackpacks/master/">
