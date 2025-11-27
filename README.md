@@ -6,7 +6,7 @@ A brand new Slimefun addon adding the ability to dye your beloved backpacks!
 
 ## Download
 For now no compiled builds for 1.21.X are available.
-You will have to compile them yourself against Slimefun builds from [SF-Lab](https://github.com/SlimeFun-Lab/Slimefun4).
+You will have to compile them yourself against [these Slimefun builds](https://github.com/womzil/Slimefun4).
 These builds are **NOT** compatible with Spigot!
 
 You can download old builds for versions **below** 1.21 right here: [Development Builds](https://thebusybiscuit.github.io/builds/TheBusyBiscuit/DyedBackpacks/master/)
