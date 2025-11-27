@@ -20,9 +20,8 @@ import io.github.thebusybiscuit.slimefun4.libraries.dough.updater.GitHubBuildsUp
 /**
  * This is the main class of the {@link DyedBackpacks} addon.
  * Here we initialize the different instances of {@link DyedBackpack}.
- * 
+ *
  * @author TheBusyBiscuit
- * 
  * @see DyedBackpack
  *
  */
@@ -37,8 +36,16 @@ public class DyedBackpacks extends JavaPlugin implements SlimefunAddon {
             new GitHubBuildsUpdater(this, getFile(), "TheBusyBiscuit/DyedBackpacks/master").start();
         }
 
-        Research research = new Research(new NamespacedKey(this, "dyed_backpacks"), 17200, "Dyed Backpacks", 24);
-        ItemGroup itemGroup = new ItemGroup(new NamespacedKey(this, "dyed_backpacks"), CustomItemStack.create(PlayerHead.getItemStack(PlayerSkin.fromHashCode(BackpackColor.RED.getTexture())), "&4Dyed Backpacks"), 2);
+        Research research = new Research(
+                new NamespacedKey(this, "dyed_backpacks"), 17200, "Dyed Backpacks", 24
+        );
+        ItemGroup itemGroup = new ItemGroup(
+                new NamespacedKey(this, "dyed_backpacks"),
+                CustomItemStack.create(
+                        PlayerHead.getItemStack(PlayerSkin.fromHashCode(BackpackColor.RED.getTexture())),
+                        "&4Dyed Backpacks"
+                ), 2
+        );
 
         if (cfg.getBoolean("backpacks.small")) {
             createBackpacks(itemGroup, research, SlimefunItems.BACKPACK_SMALL, 9);
@@ -65,7 +72,12 @@ public class DyedBackpacks extends JavaPlugin implements SlimefunAddon {
     @ParametersAreNonnullByDefault
     private void createBackpacks(ItemGroup itemGroup, Research research, SlimefunItemStack backpack, int size) {
         for (BackpackColor color : BackpackColor.values()) {
-            SlimefunItemStack item = new SlimefunItemStack("DYED_" + backpack.getItemId() + "_" + color.name(), color.getTexture(), backpack.getItemMeta().getDisplayName() + " &7(" + color.getName() + "&7)", backpack.getItemMeta().getLore().toArray(new String[0]));
+            SlimefunItemStack item = new SlimefunItemStack(
+                    "DYED_" + backpack.getItemId() + "_" + color.name(),
+                    color.getTexture(),
+                    backpack.getItemMeta().getDisplayName() + " &7(" + color.getName() + "&7)",
+                    backpack.getItemMeta().getLore().toArray(new String[0])
+            );
             DyedBackpack dyed = new DyedBackpack(size, itemGroup, item, backpack, color);
             research.addItems(dyed);
             dyed.register(this);
